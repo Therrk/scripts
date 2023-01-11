@@ -1,3 +1,6 @@
 #! /bin/bash
-mv $1 /home/therk/.dotfiles
-ln -s /home/therk/.dotfiles/$1
+for file in "$@"
+do
+	mv $file /home/therk/.dotfiles
+	ln -s /home/therk/.dotfiles/$file
+done
