@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/sh
 
 case $(setxkbmap -query | grep layout | awk '{ print $2 }') in
           ca) setxkbmap us ;;
-		  us) setxkbmap ca ;;
+		  us) setxkbmap ca -variant fr-legacy;;
 esac
